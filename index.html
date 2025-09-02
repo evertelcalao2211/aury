@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aury Stella Alkerque Casanova - Currículum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== ESTILOS GENERALES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== SECCIÓN HEADER (ENCABEZADO) ===== */
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile-img-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        }
+
+        .profile-placeholder {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .name {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ===== SECCIÓN CONTENIDO PRINCIPAL ===== */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            animation: slideUp 1s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        /* ===== SECCIÓN EXPERIENCIA LABORAL ===== */
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover, .education-item:hover {
+            transform: translateX(10px);
+        }
+
+        /* ===== SECCIÓN HABILIDADES ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ===== SECCIÓN DOCUMENTOS ===== */
+        .documents-notice {
+            background: #fff3cd;
+            border: 2px dashed #ffc107;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .documents-notice i {
+            font-size: 2rem;
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-img-container {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== CONTENEDOR PRINCIPAL ===== -->
+    <div class="cv-container">
+        
+        <!-- ===== SECCIÓN HEADER (INFORMACIÓN PERSONAL) ===== -->
+        <div class="header">
+            <div class="profile-img-container">
+                <img src="./img/foto de aury.jpeg" 
+                     alt="Foto de perfil de Aury Stella" 
+                     class="profile-img"
+                     onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';">
+                <div id="profile-placeholder" class="profile-placeholder" style="display: none;">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+            
+            <h1 class="name">Aury Stella Alkerque Casanova</h1>
+            <p class="title">Auxiliar de Archivo - Técnica Laboral</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-id-card"></i>
+                    <span>CC. 1067939737</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>300 318 4660</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>aurysalquerque@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Montería, Córdoba</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SECCIÓN CONTENIDO PRINCIPAL ===== -->
+        <div class="content">
+            
+            <!-- ===== SECCIÓN PERFIL PROFESIONAL ===== -->
+            <div class="section">
+                <h2 class="section-title">Perfil Profesional</h2>
+                <p>Auxiliar de Archivo con experiencia en organización de archivos y documentos. Responsable, honesta, comprometida, con capacidad para seguir instrucciones, trabajar en equipo y con buenas relaciones interpersonales.</p>
+            </div>
+
+            <!-- ===== SECCIÓN EXPERIENCIA LABORAL ===== -->
+            <div class="section">
+                <h2 class="section-title">Experiencia Laboral</h2>
+                <div class="experience-item">
+                    <h3>Operador de Digitalización de Expedientes</h3>
+                    <p><strong>Consorcio Digijudicial Montería 2020</strong></p>
+                    <p><i class="fas fa-calendar"></i> Julio 2024 - Noviembre 2024</p>
+                    <p><i class="fas fa-briefcase"></i> Contrato de prestación de servicios</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Auxiliar de Archivo</h3>
+                    <p><strong>Algar Tecnología S.A.S</strong></p>
+                    <p><i class="fas fa-calendar"></i> 1 año 6 meses</p>
+                    <p><i class="fas fa-user-tie"></i> Jefe inmediato: Maria Isabel Gonzales (3204649691)</p>
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN FORMACIÓN ACADÉMICA ===== -->
+            <div class="section">
+                <h2 class="section-title">Formación Académica</h2>
+                <div class="education-item">
+                    <h3>Técnico Laboral en Auxiliar de Archivo</h3>
+                    <p><strong>Centro de Sistemas de Antioquia (CENSA)</strong></p>
+                    <p><i class="fas fa-calendar"></i> Graduación: Octubre 2023</p>
+                    <p><i class="fas fa-clock"></i> 1568 horas teórico-prácticas</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3>Bachiller Académico</h3>
+                    <p><strong>Institución Educativa Victoria Manzur</strong></p>
+                    <p><i class="fas fa-calendar"></i> Graduación: Diciembre 2014</p>
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN HABILIDADES ===== -->
+            <div class="section">
+                <h2 class="section-title">Habilidades y Cursos</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-archive"></i>
+                        <h3>Gestión de Archivos</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-digital-tachograph"></i>
+                        <h3>Digitalización</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Trabajo en Equipo</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-headset"></i>
+                        <h3>Atención al Cliente</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-file-excel"></i>
+                        <h3>Excel Básico</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-comments"></i>
+                        <h3>Comunicación</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SECCIÓN DOCUMENTOS ===== -->
+            <div class="documents-notice">
+                <i class="fas fa-file-pdf"></i>
+                <h3>Documentos Adjuntos Disponibles</h3>
+                <p>Los siguientes documentos serán enviados en Archivo Externo a Solicitud  Del Reclutador:</p>
+                <ul style="list-style: none; margin: 15px 0;">
+                    <li><i class="fas fa-file-certificate"></i> Título de Bachiller Académico</li>
+                    <li><i class="fas fa-graduation-cap"></i> Título Técnico Laboral en Auxiliar de Archivo</li>
+                    <li><i class="fas fa-briefcase"></i> Certificados Laborales</li>
+                </ul>
+                <p><strong>Disponibles para validación inmediata</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===== JAVASCRIPT PARA ANIMACIONES =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'slideUp 1s ease-out forwards';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // ===== MANEJO DE LA FOTO DE PERFIL =====
+            const profileImg = document.querySelector('.profile-img');
+            const profilePlaceholder = document.getElementById('profile-placeholder');
+            
+            // Si la imagen no carga, mostrar placeholder
+            if (profileImg.complete && profileImg.naturalHeight === 0) {
+                profileImg.style.display = 'none';
+                profilePlaceholder.style.display = 'flex';
+            }
+        });
+
+        // ===== FUNCIÓN PARA CAMBIAR LA FOTO =====
+        function cambiarFoto(url) {
+            const profileImg = document.querySelector('.profile-img');
+            const profilePlaceholder = document.getElementById('profile-placeholder');
+            
+            profileImg.src = url;
+            profileImg.style.display = 'block';
+            profilePlaceholder.style.display = 'none';
+            
+            // Verificar si la nueva imagen carga correctamente
+            profileImg.onerror = function() {
+                this.style.display = 'none';
+                profilePlaceholder.style.display = 'flex';
+            };
+        }
+    </script>
+</body>
+</html>
